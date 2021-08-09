@@ -4,25 +4,18 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
+      - name: Define environment url
       - run: |
-          ls ${{ github.workspace }}
           curl --location --request POST 'https://mlspace.aicloud.sbercloud.ru/deployments/DGX2-INF/kfserving-1628119678/v1/models/kfserving-1628119678:predict' \
           --header 'content-type: application/json' \
           --header 'x-api-key: 7f535676223e4628a8e16c10289344a9' \
           --header 'x-workspace-id: ac053555-04eb-476a-90fb-0b2a08a3da2e' \
           --data-raw '{
-              "instances":
-              [
-                  {
-                    "image_link" : "sdf.jpg"
-                  }
-              ]
-          }'
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+                        "instances":W
+                        [
+                            {
+                              "image_link" : "sdf.jpg"
+
+                            }
+                        ]
+                    }'
