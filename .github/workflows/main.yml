@@ -6,4 +6,4 @@ jobs:
     steps:
       - name: Trigger GitHub pages rebuild
         run: |
-        curl --location --request POST 'https://mlspace.aicloud.sbercloud.ru/deployments/dgx2-inf/kfserving-1628574535/v1/models/kfserving-1628574535:predict' --header 'content-type: application/json' --header 'x-api-key: ce33f1d53bb242c486ed49f605b4b66c' --header 'x-workspace-id: ac053555-04eb-476a-90fb-0b2a08a3da2e' --data-raw '{}'
+          curl --location --request POST 'https://mlspace.aicloud.sbercloud.ru/deployments/dgx2-inf/kfserving-1628574535/v1/models/kfserving-1628574535:predict' --header 'content-type: application/json' --header 'x-api-key: ce33f1d53bb242c486ed49f605b4b66c' --header 'x-workspace-id: ac053555-04eb-476a-90fb-0b2a08a3da2e' --data-raw '{}'
